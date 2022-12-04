@@ -17,3 +17,18 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        var configuration = cell.defaultContentConfiguration()
+        configuration.text = "Строка \(indexPath.row)"
+        cell.contentConfiguration = configuration
+        // возвращаем сконфигурированный экземпляр ячейки
+        return cell
+    }
+
+}
