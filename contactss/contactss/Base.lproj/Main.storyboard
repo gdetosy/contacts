@@ -17,29 +17,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oM6-4i-1zJ">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="497"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="E85-qJ-CFR"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLt-hv-fJu">
+                                <rect key="frame" x="25" y="576" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="oM6-4i-1zJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FRS-F3-2OY"/>
-                            <constraint firstItem="oM6-4i-1zJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Uk1-Bn-MpM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oM6-4i-1zJ" secondAttribute="bottom" id="xGN-if-l7G"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oM6-4i-1zJ" secondAttribute="trailing" id="z9D-CZ-7V7"/>
+                            <constraint firstItem="oM6-4i-1zJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D3F-Tu-su2"/>
+                            <constraint firstItem="wLt-hv-fJu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="THp-hF-nqM"/>
+                            <constraint firstItem="oM6-4i-1zJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VAX-EH-smf"/>
+                            <constraint firstAttribute="bottom" secondItem="oM6-4i-1zJ" secondAttribute="bottom" constant="300" id="jgO-Uf-Rll"/>
+                            <constraint firstItem="oM6-4i-1zJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q0f-X9-565"/>
+                            <constraint firstItem="wLt-hv-fJu" firstAttribute="top" secondItem="oM6-4i-1zJ" secondAttribute="bottom" constant="32" id="tde-Qu-9Ax"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="4"/>
+            <point key="canvasLocation" x="10.769230769230768" y="3.5545023696682461"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
