@@ -12,7 +12,8 @@ protocol ProtocolContact {
     var number: String { get set }
 }
 
-struct Contact {
+struct Contact: ProtocolContact {
     var title: String
     var number: String
 }
+
