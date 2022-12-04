@@ -5,7 +5,7 @@
 //  Created by tosy on 4.12.22.
 //
 
-import Foundation
+import UIKit
 
 protocol ProtocolContact {
     var title: String { get set }

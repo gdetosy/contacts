@@ -8,9 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let firstName = [ "Ivanov", "Petrov", "Sidorov", "Rusakovich", "Dorofeev", "Mahnach", "Divin", "Ttrofimovich", "Revazov", "Fomchenko" ]
+     let lastName = ["Alex", "Arkadi", "Anton", "Andrei", "Vadim", "Valeria", "Dmitry", "Evgeni", "Sam", "Artur"]
+     var firstLastName: [String] = []
+    func randomContacts () {
+        for _ in 1...10 {
+            firstLastName.append((firstName.randomElement() ?? "") + " " + (lastName.randomElement() ?? ""))
+            print(firstLastName)
+        }
+    }
+       
+    
+    
+    
     private var contacts = [ProtocolContact]()
-    override func viewDidLoad() {
-       addContact()
+    
+override func viewDidLoad() {
+ randomContacts()
             super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -18,7 +33,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return firstLastName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,8 +49,7 @@ extension ViewController: UITableViewDataSource {
     
     private func configure(cell: inout UITableViewCell, for indexPath: IndexPath) {
         var configuration = cell.defaultContentConfiguration()
-        configuration.text = contacts[indexPath.row].title
-        configuration.secondaryText = contacts[indexPath.row].number
+        configuration.text = firstLastName[indexPath.row]
         cell.contentConfiguration = configuration
     }
     private func addContact() {
