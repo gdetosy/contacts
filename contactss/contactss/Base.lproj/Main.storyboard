@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="nNP-hc-TZ8" kind="show" identifier="goContact" id="Opd-1f-JHH"/>
+                                            <segue destination="nNP-hc-TZ8" kind="show" identifier="goToPerson" id="UeU-hw-xjv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -66,10 +66,26 @@
                     <view key="view" contentMode="scaleToFill" id="KfS-hO-wcY">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-rc-ikU">
+                                <rect key="frame" x="25" y="141" width="340" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QFC-cU-RjK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vrt-rc-ikU" firstAttribute="leading" secondItem="QFC-cU-RjK" secondAttribute="leading" constant="25" id="5If-b0-ZyF"/>
+                            <constraint firstItem="Vrt-rc-ikU" firstAttribute="top" secondItem="QFC-cU-RjK" secondAttribute="top" constant="50" id="F4K-AW-2xe"/>
+                            <constraint firstItem="QFC-cU-RjK" firstAttribute="trailing" secondItem="Vrt-rc-ikU" secondAttribute="trailing" constant="25" id="jbo-ul-5Zr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TJN-Xx-K2v"/>
+                    <connections>
+                        <outlet property="lbl" destination="Vrt-rc-ikU" id="LxV-T2-6Rf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8t-W8-7BK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

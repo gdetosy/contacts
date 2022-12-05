@@ -8,11 +8,20 @@
 import UIKit
 
 class ContactViewController: UIViewController {
-
+    var updatingData: String = ""
+    @IBOutlet weak var lbl: UILabel!
+   
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
+       
+        }
         // Do any additional setup after loading the view.
+        
+ 
+        
+        
     }
     
 
@@ -26,4 +35,4 @@ class ContactViewController: UIViewController {
     }
     */
 
-}
+
