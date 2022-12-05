@@ -34,7 +34,7 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goContact", sender: nil)
+      
         print(indexPath.row)
     }
 
