@@ -10,7 +10,18 @@ import UIKit
 class ContactViewController: UIViewController {
     var updatingData: String = ""
     @IBOutlet weak var lbl: UILabel!
-   
+    override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)
+        updateTextFieldData(withText: updatingData)
+    }
+
+    private func updateTextFieldData(withText text: String) {
+        lbl.text = text
+    }
+
+    
+    
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
